@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "route": "/.auth/login/aad",
+            "statusCode": 404
+        },
+        {
+            "route": "/src/*",
+            "allowedRoles": ["authenticated"]
+        }
+    ]
+}
