@@ -6,12 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@[VERSION]"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@[VERSION]"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@[VERSION]"></script>  
 </head>
 
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
+    <h3>test</h3>
   </main>
+  <div id="vis"></div>
+
+  <script type="text/javascript">
+    var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+    vegaEmbed('#vis', spec).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>  
 </body>
 
 </html>
